@@ -1,0 +1,27 @@
+{
+    "name": "xiaochengfu/yii2-aliyun-mns",
+    "description": "阿里云短信推送，yii2-aliyun-mns",
+    "type": "yii2-extension",
+    "keywords": ["阿里云短信推送，yii2-aliyun-mns"],
+    "license": "BSD-3-Clause",
+    "minimum-stability": "stable",
+    "support": {
+        "issues": "https://github.com/xiaochengfu/yii2-aliyun-mns/issues",
+        "source": "https://github.com/xiaochengfu/yii2-aliyun-mns"
+    },
+    "authors": [
+        {
+            "name": "houpeng",
+            "email": "xcf-hp@Foxmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "xiaochengfu\\aliyunMns\\": ""
+        }
+    }
+}
+
