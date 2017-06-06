@@ -2,7 +2,7 @@
     "name": "xiaochengfu/yii2-aliyun-mns",
     "description": "阿里云短信推送，yii2-aliyun-mns",
     "type": "yii2-extension",
-    "keywords": ["阿里云短信推送，yii2-aliyun-mns"],
+    "keywords": ["yii2","extension","aliyun-mns","yii2-aliyun-mns"],
     "license": "BSD-3-Clause",
     "minimum-stability": "stable",
     "support": {
