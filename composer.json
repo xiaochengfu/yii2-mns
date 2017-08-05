@@ -1,5 +1,5 @@
 {
-    "name": "xiaochengfu/yii2-aliyun-mns",
+    "name": "xiaochengfu/yii2-mns",
     "description": "阿里云短信推送，yii2-aliyun-mns",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","aliyun-mns","yii2-aliyun-mns"],

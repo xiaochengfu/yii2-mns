@@ -1,6 +1,6 @@
-阿里云短信推送，yii2-aliyun-mns
+阿里云、云片短信推送，yii2-aliyun-mns
 =======================
-阿里云短信推送，yii2-aliyun-mns
+阿里云、云片短信推送
 
 Installation
 ------------
@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require xiaochengfu/yii2-aliyun-mns "dev-master"
+composer require xiaochengfu/yii2-mns "dev-master"
 ```
 
 or add
 
 ```
-"xiaochengfu/yii2-aliyun-mns": "*"
+"xiaochengfu/yii2-mns": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -28,14 +28,24 @@ Usage
 1.在主配置文件中增加components
 ```php
 'components' => [
-     'mns'=>[
-            'class'=> 'xiaochengfu\aliyunMns\component\MnsComponent',
-            'accessId' => '',
-            'accessKey' => '',
-            'endpoint' => 'http://xxxx.mns.cn-hangzhou.aliyuncs.com/',
-            'topicName' => '',
-            'smsSignName' => '',
-        ],
+      'mns'=>[
+                 'class'=> 'xiaochengfu\mns\Module',
+                 'config'=>[
+                     'aliyun'=>[
+                         'active'=>true, //true位开启，false为关闭
+                         'accessId' => 'xxxx',
+                         'accessKey' => 'xxxxxxxxx',
+                         'endpoint' => 'http://xxxx.mns.cn-hangzhou.aliyuncs.com/',
+                         'topicName' => 'xxx',
+                         'smsSignName' => 'xxxx',
+                     ],
+                     'yunpian' => [
+                         'active'=>false,
+                         'apikey' => 'xxxxxx', // 请替换成您的apikey
+                     ]
+                 ]
+
+             ],
 ]
 ```
 2.在程序中使用：

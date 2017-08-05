@@ -4,7 +4,7 @@
  * time:2017-05-27
  * author:houpeng
  */
-namespace xiaochengfu\aliyunMns\component;
+namespace xiaochengfu\mns\component;
 require_once(dirname(dirname(__FILE__)).'/php_sdk/mns-autoloader.php');
 use AliyunMNS\Client;
 use AliyunMNS\Exception\MnsException;
@@ -14,7 +14,7 @@ use AliyunMNS\Model\SmsAttributes;
 use AliyunMNS\Requests\PublishMessageRequest;
 use Yii;
 
-class MnsComponent extends \yii\base\Component
+class AliYun
 {
     public $accessId = '';
     public $accessKey = '';
@@ -24,10 +24,11 @@ class MnsComponent extends \yii\base\Component
     private $client;
 
     const YZM = 'SMS_xxxx';//常规验证码
-    const ZDTZ = 'SMS_xxx';//财务账单通知
+    const ZDTZ = 'SMS_xxxx';//财务账单通知
 
     /**
-     * @return Client
+     * AliYun constructor.
+     * @param $config
      * 短信模板
      * 1.普通验证码模板-YZM = [
      *     'code' => 'xxx',
@@ -41,12 +42,16 @@ class MnsComponent extends \yii\base\Component
      *    'ordersn'=>'2054984646498'
      * ]
      */
-    public function init(){
+    public function __construct($config){
         /**
          * Step 1. 初始化Client
          */
+        $this->endpoint = $config['endpoint'];
+        $this->accessId = $config['accessId'];
+        $this->accessKey = $config['accessKey'];
+        $this->topicName = $config['topicName'];
+        $this->smsSignName = $config['smsSignName'];
         $this->client = new Client($this->endpoint, $this->accessId, $this->accessKey);
-
         return $this->client;
     }
 
