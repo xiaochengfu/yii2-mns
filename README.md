@@ -51,6 +51,13 @@ Usage
 2.在程序中使用：
 ```
 //单条发送
+当使用云片时：
+$smsParams = '具体的消息内容';
+当使用阿里云时：
+$smsParams = [
+    'code'=>'xxx',
+    'product'=>'xxx'
+];
 Yii::$app->mns->send('186********',$smsParams,MnsComponent::YZM);
 
 //批量发送
