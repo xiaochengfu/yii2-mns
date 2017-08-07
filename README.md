@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require xiaochengfu/yii2-mns "dev-master"
+composer require xiaochengfu/yii2-mns "v1.0.1"
 ```
 
 or add
